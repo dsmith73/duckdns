@@ -5,7 +5,7 @@ inputs:
   playbook:
     description: 'Ansible playbook to run'
     required: true
-    default: domain_update.yml
+    default: main.yml
   inventory:
     description: 'Ansible inventory to use'
     required: true
