@@ -4,7 +4,7 @@ on:
   schedule:
     # Uses UTC time (EST - 5)  
     # To run at 2pm every day, set cron to '0 19 * * *'  
-    - cron:  '35 21 * * *'
+    - cron:  '5 22 * * *'
 
 jobs:
   scheduled:
@@ -24,6 +24,6 @@ jobs:
     - uses: actions/checkout@v1
     - uses: ./.github/actions/ansible
       with: 
-        playbook: domain_update.yml
+        playbook: main.yml
         inventory: localhost
         
