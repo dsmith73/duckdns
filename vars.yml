@@ -1,0 +1,10 @@
+
+BASE_URL    : "www.duckdns.org/update?"
+
+# The following variables have been moved into Secrets - re-enable them if you plan to run locally  
+
+### Use comma separated list when multiple domains  
+#### e.g. "domain_A.duckdns.org,domain_B.duckdns.org,etc..."
+# DOMAINS     : "xxxxxxxx.duckdns.org"
+# IP_ADDRESS  : "XXX.XXX.XXX.XXX"
+# TOKEN       : "xxxxxxx-xxxx-xxxxxxx-xxxx-xxxxxxx"
