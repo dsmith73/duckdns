@@ -1,1 +1,1 @@
-ansible-playbook domain_update.yml
+ansible-playbook main.yml
