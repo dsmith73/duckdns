@@ -1,0 +1,29 @@
+name: "Update DuckDNS on schedule"
+
+on:
+  schedule:
+    # Uses UTC time (EST - 5)  
+    # To run at 2pm every day, set cron to '0 19 * * *'  
+    - cron:  '0 6 * * *'
+
+jobs:
+  scheduled:
+    name: Scheduled Job
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v2
+    - name: Lint Ansible Playbook
+      uses: ansible/ansible-lint-action@master
+      with:
+        targets: ""
+  deployAnsible:
+    needs: scheduled
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: ./.github/actions/ansible
+      with: 
+        playbook: domain_update.yml
+        inventory: localhost
+        
