@@ -6,7 +6,7 @@ ENV ANSIBLE_HOST_KEY_CHECKING=false
 ENV ANSIBLE_GATHERING=smart
 ENV ANSIBLE_RETRY_FILES_ENABLED=false
 
-RUN /bin/sh -c yum check-update;   yum install -y gcc libffi-devel python3 epel-release;   yum install -y openssh-clients;   yum install -y sshpass;   pip3 install --upgrade pip;   pip3 install ansible;   pip3 install --force-reinstall ansible-lint==5.3.2
+RUN /bin/sh -c yum check-update;   yum install -y gcc libffi-devel python3 epel-release;   yum install -y openssh-clients;   yum install -y sshpass;   pip3 install --upgrade pip;   pip3 install ansible==latest;   pip3 install ansible-lint==latest
 
 COPY ./entrypoint.sh /entrypoint.sh
 
