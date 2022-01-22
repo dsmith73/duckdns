@@ -11,6 +11,10 @@ jobs:
     name: Scheduled Job
     runs-on: ubuntu-latest
     steps:
+    - name: set to EST
+      uses: szenius/set-timezone@v1.0
+      with:
+        timezoneLinux: "EST"
     - name: checkout repo
       uses: actions/checkout@v2
     - name: Lint Ansible Playbook
