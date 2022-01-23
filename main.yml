@@ -11,14 +11,14 @@
   # This portion of the play is to enable using Secrets in github + actions  
   - name: "get secrets and put them into vars"  
     set_fact:
-      DOMAINS     : ${{ secrets.DOMAINS }}
-      IP_ADDRESS  : ${{ secrets.IP_ADDRESS }}
-      TOKEN       : ${{ secrets.TOKEN }}
+      my_DOMAINS     : ${{ secrets.DOMAINS }}
+      my_IP_ADDRESS  : ${{ secrets.IP_ADDRESS }}
+      my_TOKEN       : ${{ secrets.TOKEN }}
   ## End of script customization for github  
   
-  - name          : "Update {{ DOMAINS }} on DuckDNS to use {{ IP_ADDRESS }}"
+  - name          : "Update {{ my_DOMAINS }} on DuckDNS to use {{ my_IP_ADDRESS }}"
     uri           : 
-      url         : "https://{{ BASE_URL }}domains={{ DOMAINS }}&token={{ TOKEN }}&ip={{ IP_ADDRESS }}"
+      url         : "https://{{ BASE_URL }}domains={{ my_DOMAINS }}&token={{ my_TOKEN }}&ip={{ my_IP_ADDRESS }}"
     register      : output
 
   ## Show the output  
