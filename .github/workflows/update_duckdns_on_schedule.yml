@@ -4,7 +4,7 @@ on:
   schedule:
     # Uses UTC time (EST - 5)  
     # To run at 2pm every day, set cron to '0 19 * * *'  
-    - cron:  '09 18 * * *'
+    - cron:  '35 18 * * *'
 
 jobs:
   scheduled:
@@ -19,7 +19,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Lint Ansible Playbook
       # Using ansible-community lint to overcome a breaking change  
-      uses: ansible-community/ansible-lint-action@master
+      uses: ansible/ansible-lint-action@master
       with:
         # This override should be forward compatable  
         override-deps: |
