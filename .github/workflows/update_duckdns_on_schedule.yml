@@ -18,8 +18,10 @@ jobs:
     - name: checkout repo
       uses: actions/checkout@v2
     - name: Lint Ansible Playbook
+      # Using ansible-community lint to overcome a breaking change  
       uses: ansible-community/ansible-lint-action@master
       with:
+        # This override should be forward compatable  
         override-deps: |
           ansible>=2.9
           ansible-lint>5.3.0
