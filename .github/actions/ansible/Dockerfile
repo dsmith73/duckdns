@@ -1,7 +1,7 @@
 FROM  ubuntu:latest
 # use latest Ubuntu, so I don't version restrict myself  
 
-CMD ["/bin/sh"]
+# CMD ["/bin/sh"]
 
 ENV ANSIBLE_HOST_KEY_CHECKING=false
 ENV ANSIBLE_GATHERING=smart
