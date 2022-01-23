@@ -12,10 +12,7 @@ RUN apt update && \
     apt -y upgrade && \
     apt install -y software-properties-common && \
     add-apt-repository --yes --update ppa:ansible/ansible && \
-    apt install -y ansible && \
-    apt install -y python3-pip && \
-    pip3 install git+https://github.com/ansible-community/ansible-lint.git && \
-    pip3 install --upgrade ansible-lint
+    apt install -y ansible
 
 COPY ./entrypoint.sh /entrypoint.sh
 
