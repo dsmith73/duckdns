@@ -14,8 +14,10 @@ RUN sudo apt update && \
     sudo add-apt-repository --yes --update ppa:ansible/ansible && \
     sudo apt install -y ansible && \
     sudo apt install -y python3-pip && \
-    pip3 install git+https://github.com/ansible-community/ansible-lint.git
- 
+    pip3 install git+https://github.com/ansible-community/ansible-lint.git && \
+    sudo apt update && \
+    sudo apt -y upgrade && \
+    ansible-lint --version
 
 COPY ./entrypoint.sh /entrypoint.sh
 
