@@ -1,5 +1,4 @@
 FROM  ubuntu:latest
-# use latest Ubuntu, so I don't version restrict myself  
 
 CMD ["/bin/sh"]
 
@@ -7,7 +6,6 @@ ENV ANSIBLE_HOST_KEY_CHECKING=false
 ENV ANSIBLE_GATHERING=smart
 ENV ANSIBLE_RETRY_FILES_ENABLED=false
 
-# install ansible, then pip, and the latest verison of ansible lint from community  
 RUN apt update && \
     apt -y upgrade && \
     apt install -y software-properties-common && \
