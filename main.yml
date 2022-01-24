@@ -10,7 +10,7 @@
   
   - name          : "Update DuckDNS"
     uri           : 
-      url         : "{{ THE_URL }}"
+      url         : "{{ lookup('env','THE_URL') }}"
 #       url         : "https://{{ BASE_URL }}domains={{ DOMAINS }}&token={{ TOKEN }}&ip={{ IP_ADDRESS }}"
     register      : output
 
