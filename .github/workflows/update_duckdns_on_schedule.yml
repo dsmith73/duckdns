@@ -32,4 +32,6 @@ jobs:
         playbook: main.yml
         inventory: localhost
       env:
-        THE_URL: ${{ secrets.THE_URL }} 
+        DOMAINS: ${{ secrets.DOMAINS }}
+        IP_ADDRESS: ${{ secrets.IP_ADDRESS }}
+        TOKEN: ${{ secrets.TOKEN }}
