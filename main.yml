@@ -10,7 +10,7 @@
   
   - name          : "Update DuckDNS"
     uri           : 
-      url         : ${{ secrets.THE_URL }}
+      url         : ${{ THE_URL }}
 #       url         : "https://{{ BASE_URL }}domains={{ DOMAINS }}&token={{ TOKEN }}&ip={{ IP_ADDRESS }}"
     register      : output
 
