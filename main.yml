@@ -10,7 +10,9 @@
   
   - name          : "Update DuckDNS"
     uri           : 
-      url         : "https://{{ BASE_URL }}domains={{ env.DOMAINS }}&token={{ env.TOKEN }}&ip={{ env.IP_ADDRESS }}"
+#       ## Switching to github actions, need to pull secrets from .env  
+#       url         : "https://{{ BASE_URL }}domains={{ DOMAINS }}&token={{ TOKEN }}&ip={{ IP_ADDRESS }}"
+      url         : "https://{{ BASE_URL }}domains={{ lookup('env','DOMAINS') }}&token={{ env.TOKEN }}&ip={{ env.IP_ADDRESS }}"
     register      : output
 
   ## Show the output  
