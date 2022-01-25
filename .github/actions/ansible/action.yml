@@ -12,7 +12,7 @@ inputs:
     default: localhost
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: dsmith73/github-action.ubuntu-ansible:latest
   args:
     - ${{ inputs.playbook }}
     - ${{ inputs.inventory }}
