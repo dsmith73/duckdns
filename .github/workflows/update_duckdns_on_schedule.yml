@@ -5,12 +5,14 @@ on:
     # Uses UTC time (EST - 5)  
     # To run at 2pm every day, set cron to '0 19 * * *'  
 #     - cron:  '26 0/6 * * *'
-    - cron:  '29 12 * * *'
-
+    - cron:  '53 13 * * *'
+      
 jobs:
   scheduled:
     name: Scheduled Job
     runs-on: ubuntu-latest
+    container:
+      image: dsmith73/github-action.ubuntu-ansible:latest
     steps:
     - name: checkout repo
       uses: actions/checkout@v2
@@ -26,6 +28,8 @@ jobs:
   deployAnsible:
     needs: scheduled
     runs-on: ubuntu-latest
+    container:
+      image: dsmith73/github-action.ubuntu-ansible:latest
     steps:
     - uses: actions/checkout@v1
     - uses: ./.github/actions/ansible
