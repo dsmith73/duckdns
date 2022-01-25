@@ -5,7 +5,7 @@ on:
     # Uses UTC time (EST - 5)  
     # To run at 2pm every day, set cron to '0 19 * * *'  
 #     - cron:  '26 0/6 * * *'
-    - cron:  '53 11 * * *'
+    - cron:  '29 12 * * *'
 
 jobs:
   scheduled:
