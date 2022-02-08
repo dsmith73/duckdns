@@ -3,8 +3,8 @@ name: "Update DuckDNS on schedule"
 on:
   schedule:
     # Uses UTC time (EST - 5)  
-    # To run at 2pm every day, set cron to '0 19 * * *'  
-    - cron:  '26 0/6 * * *'
+    # Run every 2hrs at 26 past  
+    - cron:  '26 0/2 * * *'
       
 jobs:
   scheduled:
