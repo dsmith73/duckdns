@@ -4,7 +4,7 @@ on:
   schedule:
     # Uses UTC time (EST - 5)  
     # Run every 2hrs at 26 past  
-    - cron:  '26 0/2 * * *'
+    - cron: '26 0/2 * * *'
       
 jobs:
   scheduled:
